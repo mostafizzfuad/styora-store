@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+html,
+body,
+:root {
+	height: 100%;
+}
+
+/* -------------------- */
+/* Custom variables */
+/* -------------------- */
+:root {
+	/* Font Sizes */
+	--font-heading1-bold: 50px;
+	--font-heading1-bold--line-height: 100%;
+	--font-heading1-bold--font-weight: 700;
+
+	--font-heading2-bold: 30px;
+	--font-heading2-bold--line-height: 100%;
+	--font-heading2-bold--font-weight: 700;
+
+	--font-heading3-bold: 24px;
+	--font-heading3-bold--line-height: 100%;
+	--font-heading3-bold--font-weight: 700;
+
+	--font-heading4-bold: 20px;
+	--font-heading4-bold--line-height: 100%;
+	--font-heading4-bold--font-weight: 700;
+
+	--font-body-bold: 18px;
+	--font-body-bold--line-height: 100%;
+	--font-body-bold--font-weight: 700;
+
+	--font-body-semibold: 18px;
+	--font-body-semibold--line-height: 100%;
+	--font-body-semibold--font-weight: 600;
+
+	--font-body-medium: 18px;
+	--font-body-medium--line-height: 100%;
+	--font-body-medium--font-weight: 500;
+
+	--font-base-bold: 16px;
+	--font-base-bold--line-height: 100%;
+	--font-base-bold--font-weight: 600;
+
+	--font-base-medium: 16px;
+	--font-base-medium--line-height: 100%;
+	--font-base-medium--font-weight: 500;
+
+	--font-small-bold: 14px;
+	--font-small-bold--line-height: 140%;
+	--font-small-bold--font-weight: 700;
+
+	--font-small-medium: 14px;
+	--font-small-medium--line-height: 140%;
+	--font-small-medium--font-weight: 500;
+
+	/* Colors */
+	--color-red-1: #ff0000;
+	--color-grey-1: #f7f7f7;
+	--color-grey-2: #8a8a8a;
+}
+
+/* -------------------- */
+/* Utility classes */
+/* -------------------- */
+
+/* Background colors */
+.bg-red-1 {
+	background-color: var(--color-red-1);
+}
+.bg-grey-1 {
+	background-color: var(--color-grey-1);
+}
+.bg-grey-2 {
+	background-color: var(--color-grey-2);
+}
+
+/* Text colors */
+.text-red-1 {
+	color: var(--color-red-1);
+}
+.text-grey-1 {
+	color: var(--color-grey-1);
+}
+.text-grey-2 {
+	color: var(--color-grey-2);
+}
+
+/* Font sizes + weights */
+.text-heading1-bold {
+	font-size: var(--font-heading1-bold);
+	line-height: var(--font-heading1-bold--line-height);
+	font-weight: var(--font-heading1-bold--font-weight);
+}
+.text-heading2-bold {
+	font-size: var(--font-heading2-bold);
+	line-height: var(--font-heading2-bold--line-height);
+	font-weight: var(--font-heading2-bold--font-weight);
+}
+.text-heading3-bold {
+	font-size: var(--font-heading3-bold);
+	line-height: var(--font-heading3-bold--line-height);
+	font-weight: var(--font-heading3-bold--font-weight);
+}
+.text-heading4-bold {
+	font-size: var(--font-heading4-bold);
+	line-height: var(--font-heading4-bold--line-height);
+	font-weight: var(--font-heading4-bold--font-weight);
+}
+.text-body-bold {
+	font-size: var(--font-body-bold);
+	line-height: var(--font-body-bold--line-height);
+	font-weight: var(--font-body-bold--font-weight);
+}
+.text-body-semibold {
+	font-size: var(--font-body-semibold);
+	line-height: var(--font-body-semibold--line-height);
+	font-weight: var(--font-body-semibold--font-weight);
+}
+.text-body-medium {
+	font-size: var(--font-body-medium);
+	line-height: var(--font-body-medium--line-height);
+	font-weight: var(--font-body-medium--font-weight);
+}
+.text-base-bold {
+	font-size: var(--font-base-bold);
+	line-height: var(--font-base-bold--line-height);
+	font-weight: var(--font-base-bold--font-weight);
+}
+.text-base-medium {
+	font-size: var(--font-base-medium);
+	line-height: var(--font-base-medium--line-height);
+	font-weight: var(--font-base-medium--font-weight);
+}
+.text-small-bold {
+	font-size: var(--font-small-bold);
+	line-height: var(--font-small-bold--line-height);
+	font-weight: var(--font-small-bold--font-weight);
+}
+.text-small-medium {
+	font-size: var(--font-small-medium);
+	line-height: var(--font-small-medium--line-height);
+	font-weight: var(--font-small-medium--font-weight);
+}
+
+/* ---------- Scrollbar Hide Utility ---------- */
+.scrollbar-hide::-webkit-scrollbar {
+	display: none;
+}
+
+.scrollbar-hide {
+	-ms-overflow-style: none; /* for IE and Edge */
+	scrollbar-width: none; /* for Firefox */
+}

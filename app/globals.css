@@ -144,6 +144,9 @@ body,
 	font-weight: var(--font-small-medium--font-weight);
 }
 
+.hover\:text-red-1:hover { color: var(--color-red-1); }
+.hover\:bg-red-1:hover { background-color: var(--color-red-1); }
+
 /* ---------- Scrollbar Hide Utility ---------- */
 .scrollbar-hide::-webkit-scrollbar {
 	display: none;

@@ -4,11 +4,13 @@ import { UserButton, useUser } from "@clerk/nextjs";
 import { CircleUserRound, Menu, Search, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const Navbar = () => {
 	const { user } = useUser();
 	const cart = useCart();
+	const router = useRouter();
 	const [dropdownMenu, setDropdownMenu] = useState(false);
 	const [query, setQuery] = useState("");
 
@@ -46,7 +48,12 @@ const Navbar = () => {
 					value={query}
 					onChange={(e) => setQuery(e.target.value)}
 				/>
-				<Search className="cursor-pointer h-4 w-4 hover:text-blue-800" />
+				<button
+					disabled={query === ""}
+					onClick={() => router.push(`/search/${query}`)}
+				>
+					<Search className="cursor-pointer h-4 w-4 hover:text-blue-800" />
+				</button>
 			</div>
 
 			{/* Cart */}

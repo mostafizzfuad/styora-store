@@ -10,7 +10,7 @@ export const getCollectionDetails = async (collectionId: string) => {
 		`${process.env.NEXT_PUBLIC_API_URL}/collections/${collectionId}`
 	);
 	return await collection.json();
-}
+};
 
 export const getProducts = async () => {
 	const products = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products`);

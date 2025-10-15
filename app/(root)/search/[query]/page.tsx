@@ -28,4 +28,5 @@ const SearchPage = async ({
 	);
 };
 
+export const dynamic = "force-dynamic";
 export default SearchPage;

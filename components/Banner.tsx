@@ -16,7 +16,7 @@ type HeroProps = {
 	description?: string;
 	primaryCta?: CTA;
 	secondaryCta?: CTA;
-	imageSrc: string; // required — image shown on the right
+	imageSrc?: string; // image shown on the right
 	imageAlt?: string;
 };
 
@@ -30,7 +30,7 @@ export default function Banner({
 	description = "Precision and comfort in every click",
 	primaryCta = { label: "Shop Now", href: "/shop" },
 	secondaryCta = { label: "View More", href: "/shop" },
-	imageSrc,
+	imageSrc = "/ear-banner.png",
 	imageAlt = "Product image",
 }: HeroProps) {
 	return (

@@ -1,13 +1,15 @@
 import Banner from "@/components/Banner";
 import Collections from "@/components/Collections";
 import ProductList from "@/components/ProductList";
+import ReviewsSection from "@/components/ReviewsSection";
 
 export default function HomePage() {
 	return (
 		<>
-			<Banner imageSrc="/ear-banner.png" />
+			<Banner />
 			<Collections />
 			<ProductList />
+			<ReviewsSection />
 		</>
 	);
 }

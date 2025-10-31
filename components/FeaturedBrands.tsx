@@ -32,7 +32,7 @@ export default function FeaturedBrands() {
 						</span>
 					</h2>
 					<p className="mt-3 text-lg text-slate-600">
-						Shop from the world's leading tech brands
+						{"Shop from the world's leading tech brands"}
 					</p>
 				</div>
 

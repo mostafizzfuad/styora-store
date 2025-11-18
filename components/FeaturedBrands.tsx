@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
@@ -13,6 +14,31 @@ const brands = [
 ];
 
 export default function FeaturedBrands() {
+	const [currentIndex, setCurrentIndex] = useState(0);
+
+	// auto slide – প্রতি ৪ সেকেন্ডে এক ধাপ
+	useEffect(() => {
+		const id = setInterval(() => {
+			setCurrentIndex((prev) => (prev + 1) % brands.length);
+		}, 4000);
+
+		return () => clearInterval(id);
+	}, []);
+
+	const handleNext = () => {
+		setCurrentIndex((prev) => (prev + 1) % brands.length);
+	};
+
+	const handlePrev = () => {
+		setCurrentIndex((prev) => (prev === 0 ? brands.length - 1 : prev - 1));
+	};
+
+	// rotate করা list – সব সময় ৬ টা থাকছে, শুধু অর্ডার বদলাচ্ছে
+	const visibleBrands = brands.map((_, i) => {
+		const idx = (i + currentIndex) % brands.length;
+		return brands[idx];
+	});
+
 	return (
 		<section className="relative">
 			{/* soft top-right glow */}
@@ -22,7 +48,7 @@ export default function FeaturedBrands() {
 				{/* Heading */}
 				<div className="text-center">
 					<span className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-3 py-1 text-xs font-bold text-blue-600 ring-1 ring-blue-200">
-						<span className="inline-block h-2 w-2 rounded-full bg-blue-600" />{" "}
+						<span className="inline-block h-2 w-2 rounded-full bg-blue-600" />
 						TRUSTED PARTNERS
 					</span>
 					<h2 className="mt-4 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
@@ -42,10 +68,12 @@ export default function FeaturedBrands() {
 						variant="ghost"
 						className="rounded-full shadow-md"
 						aria-label="Previous"
+						onClick={handlePrev}
 					>
 						<ArrowLeft />
 					</Button>
-					{brands.map((brand) => (
+
+					{visibleBrands.map((brand) => (
 						<motion.div
 							key={brand.name}
 							whileHover={{ scale: 1.05 }}
@@ -59,10 +87,12 @@ export default function FeaturedBrands() {
 							</p>
 						</motion.div>
 					))}
+
 					<Button
 						variant="ghost"
 						className="rounded-full shadow-md"
 						aria-label="Next"
+						onClick={handleNext}
 					>
 						<ArrowRight />
 					</Button>

@@ -1,6 +1,16 @@
-# Next.js 15 E-Commerce + Admin Dashboard (Full Stack)
+# Styora E-Commerce + Admin Dashboard (Full Stack)
 
-A production-ready full stack e-commerce platform with an admin dashboard built with:
+<div align="center">
+  <img width="1920" height="1080" alt="styora" src="https://github.com/user-attachments/assets/404cf2c5-e240-43f2-a6ca-531c57ada920" />
+</div>
+<br />
+
+
+**🔗 Live Demo:** <br />
+Store URL - https://styora-store.vercel.app/ <br />
+Admin URL - https://styora-admin.vercel.app/
+
+A full stack e-commerce platform with an admin dashboard built with:
 Next.js 15 (App Router), TypeScript, MongoDB/Mongoose, Clerk (auth & user management), Stripe (payments),
 React-Hook-Form + Zod, Tailwind CSS + shadcn/ui, Next Cloudinary (image upload/storage), and Recharts.
 
@@ -37,18 +47,12 @@ React-Hook-Form + Zod, Tailwind CSS + shadcn/ui, Next Cloudinary (image upload/s
 - Database: MongoDB (Mongoose)
 - Media: Next Cloudinary
 
-## Screenshots / Demo (placeholders)
 
-- Store: [styora-store.vercel.app](https://styora-store.vercel.app/)
-- Admin: [styora-admin.vercel.app](https://styora-admin.vercel.app/)
-
-Add images under `docs/screens/`:
-- `./docs/screens/storefront.png`
-- `./docs/screens/admin.png`
-
-## Getting Started
-
-### 1) Clone
+### Clone the Repository
 ```bash
-git clone https://github.com/yourusername/next15-ecommerce.git
-cd next15-ecommerce
+git clone https://github.com/mostafizzfuad/styora-admin.git
+cd styora-admin
+```
+
+# 👨‍💻Author
+[Md. Mostafizur Rahman](https://www.linkedin.com/in/mostafizzfuad/) - Full Stack Developer
